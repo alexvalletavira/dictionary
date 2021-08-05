@@ -19,6 +19,22 @@ const Header = ({category, setCategory, word, setWord, setPronounciation, setPro
         setFoundWord("");
         setMeanings([])
     }
+
+    const handleChange2 = (word) => {
+
+        setWord(word);
+
+        if(word == ""){
+            setPronounciation("");
+            setPronounciationURL("");
+            setFoundWord("");
+            setMeanings([])
+            setWord("");
+        }
+
+
+    }
+
     return(
         <div className="header">
             <span className="title">{word ?  word : "Word Hunt"}</span>
@@ -28,7 +44,7 @@ const Header = ({category, setCategory, word, setWord, setPronounciation, setPro
                         className= "search"
                         label="Select Word"
                         value={word}
-                        onChange={(e)=> setWord(e.target.value)}
+                        onChange={(e)=> handleChange2(e.target.value)}
                     />
                 </ThemeProvider>
 
