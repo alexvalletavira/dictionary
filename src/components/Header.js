@@ -1,8 +1,6 @@
 import React from 'react'
 import './Header.css'
 import TextField from "@material-ui/core/TextField";
-import { ThemeProvider } from '@material-ui/core/styles';
-import createMuiTheme from "@material-ui/core/styles/createTheme";
 import MenuItem from "@material-ui/core/MenuItem";
 import categories from "../data/category"
 
@@ -24,7 +22,7 @@ const Header = ({category, setCategory, word, setWord, setPronounciation, setPro
 
         setWord(word);
 
-        if(word == ""){
+        if(word === ""){
             setPronounciation("");
             setPronounciationURL("");
             setFoundWord("");
@@ -39,14 +37,12 @@ const Header = ({category, setCategory, word, setWord, setPronounciation, setPro
         <div className="header">
             <span className="title">{word ?  word : "Word Hunt"}</span>
             <div className="inputs" >
-                <ThemeProvider>
                     <TextField
                         className= "search"
                         label="Select Word"
                         value={word}
                         onChange={(e)=> handleChange2(e.target.value)}
                     />
-                </ThemeProvider>
 
                 <TextField
                         select

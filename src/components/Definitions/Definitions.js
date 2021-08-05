@@ -6,20 +6,20 @@ const Definitions = ({word, meanings, category, pronounciation, pronounciationUR
     return(
         <div className="meanings">
 
-            {word != "" &&(
+            {word !== "" &&(
 
                 <div>
                     {foundWord}
                 </div>
             )}
 
-            {pronounciationURL != "" && category == "en" && word != "" &&(
+            {pronounciationURL !== "" && category === "en" && word !== "" &&(
 
                 <div>
                     {pronounciation}
                 </div>
             )}
-                {pronounciationURL != "" && category == "en" && word != "" &&(
+                {pronounciationURL !== "" && category === "en" && word !== "" &&(
                     <div>
                         <audio className="audio" src={pronounciationURL} controls>
 

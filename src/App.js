@@ -27,20 +27,25 @@ function App() {
 
     const dictionaryApi=async()=>{
         try{
-            const data = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`);
-            setMeanings(data.data[0].meanings)
+            if(word !== "") {
+                const data = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`);
+                setMeanings(data.data[0].meanings)
 
 
-            setPronounciation(data.data[0].phonetics[0].text)
-            setPronounciationURL(data.data[0].phonetics[0].audio)
-            setFoundWord(data.data[0].word)
+                setPronounciation(data.data[0].phonetics[0].text)
+                setPronounciationURL(data.data[0].phonetics[0].audio)
+                setFoundWord(data.data[0].word)
+            }
 
         }catch (e) {
-            //console.log(e)
+            console.log(e)
         }
     };
 
-    useEffect(()=>{dictionaryApi()}, [word, category]);
+    useEffect(() => {
+        dictionaryApi();
+        // eslint-disable-next-line
+    }, [word, category]);
 
     return (
         <div className="App" style={{height: "100vh", backgroundColor: '#282c34', color: 'white'}}>
