@@ -1,0 +1,30 @@
+.title{
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 35vh;
+    width: 100%;
+}
+
+.search{
+
+    main: '#fff';
+    color: white
+}
+
+.pack{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.audio{
+
+}

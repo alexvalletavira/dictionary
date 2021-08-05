@@ -1,0 +1,16 @@
+.meanings{
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    font-size: 2vw;
+    overflow-y: auto;
+}
+
+.subTitle{
+    font-size: 2vw;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.definitionOne{
+    font-size: 1.5vw;
+}
