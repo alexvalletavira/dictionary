@@ -13,13 +13,13 @@ const Definitions = ({word, meanings, category, pronounciation, pronounciationUR
                 </div>
             )}
 
-            {pronounciationURL !== "" && category === "en" && word !== "" &&(
+            {pronounciationURL !== undefined  && word !== "" &&(
 
                 <div>
                     {pronounciation}
                 </div>
             )}
-                {pronounciationURL !== "" && category === "en" && word !== "" &&(
+                {pronounciationURL !== undefined && word !== "" &&(
                     <div>
                         <audio className="audio" src={pronounciationURL} controls>
 

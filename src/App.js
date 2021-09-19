@@ -30,8 +30,6 @@ function App() {
             if(word !== "") {
                 const data = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`);
                 setMeanings(data.data[0].meanings)
-
-
                 setPronounciation(data.data[0].phonetics[0].text)
                 setPronounciationURL(data.data[0].phonetics[0].audio)
                 setFoundWord(data.data[0].word)
